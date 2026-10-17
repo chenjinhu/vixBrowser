@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="settings_referer" type="id" />
+    <item name="settings_ua" type="id" />
+    <item name="settings_history_length" type="id" />
+    <item name="settings_error" type="id" />
+</resources>

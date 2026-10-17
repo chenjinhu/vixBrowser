@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">vixBrowser</string>
+    <string name="address_hint">输入网址，例如 https://example.com</string>
+    <string name="go">打开</string>
+    <string name="back">后退</string>
+    <string name="forward">前进</string>
+    <string name="reload">刷新</string>
+    <string name="retry">重试</string>
+    <string name="welcome_title">vixBrowser</string>
+    <string name="welcome_message">在上方输入网址，或通过 Intent 传入 URL。</string>
+    <string name="invalid_url">请输入有效的 HTTP 或 HTTPS 网址</string>
+    <string name="load_failed">网页加载失败</string>
+    <string name="network_error">无法连接到网页，请检查网址和网络后重试。</string>
+    <string name="http_error">服务器返回 HTTP %1$d，请稍后重试。</string>
+    <string name="ssl_error">网站的 HTTPS 证书无法验证，已停止加载。</string>
+    <string name="unsupported_link">暂不支持打开此类型的链接</string>
+    <string name="api_info">接口</string>
+    <string name="api_unavailable">HTTP 接口启动失败</string>
+    <string name="referer_settings">自定义 Referer</string>
+    <string name="browser_settings">浏览器设置</string>
+    <string name="browser_settings_description">留空恢复默认。Referer 用于主动打开和刷新。history.length 只改变网页读取的数字，前进和后退仍使用真实历史。</string>
+    <string name="browser_settings_saved">浏览器设置已保存</string>
+    <string name="invalid_browser_settings">浏览器设置无效，请检查 Referer、UA 和 history.length</string>
+    <string name="ua_settings">自定义 UA</string>
+    <string name="ua_hint">留空使用系统默认 User-Agent</string>
+    <string name="history_length_settings">自定义 history.length</string>
+    <string name="history_length_hint">0～2147483647，留空使用真实值</string>
+    <string name="history_length_unsupported">当前 WebView 不支持页面开始时设置 history.length，请更新 Android System WebView。</string>
+    <string name="reset_all_defaults">全部恢复默认</string>
+    <string name="referer_hint">https://source.example/</string>
+    <string name="save">保存</string>
+    <string name="api_details">设备地址：http://127.0.0.1:%1$d\n\n电脑先运行：\nadb forward tcp:%1$d tcp:%1$d\n\n接口无需认证，可直接发送 HTTP 请求。</string>
+</resources>

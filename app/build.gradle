@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+}
+
+def releaseSigningFile = rootProject.file('keystore.properties')
+def releaseSigning = new Properties()
+if (releaseSigningFile.isFile()) {
+    releaseSigningFile.withInputStream { releaseSigning.load(it) }
+}
+
+android {
+    namespace 'com.vixmobi.browser'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.vixmobi.browser'
+        minSdk 23
+        targetSdk 35
+        versionCode 5
+        versionName '1.4'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    signingConfigs {
+        if (releaseSigningFile.isFile()) {
+            release {
+                storeFile rootProject.file(releaseSigning['storeFile'])
+                storePassword releaseSigning['storePassword']
+                keyAlias releaseSigning['keyAlias']
+                keyPassword releaseSigning['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            if (releaseSigningFile.isFile()) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError true
+    }
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.11.0'
+    testImplementation 'junit:junit:4.13.2'
+}

@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+**/build/
+local.properties
+*.iml
+.DS_Store
+captures/
+__pycache__/
+*.pyc
+keystore.properties
+signing/
